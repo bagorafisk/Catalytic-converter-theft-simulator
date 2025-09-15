@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cvg8a8lnuein"]
+
+[ext_resource type="PackedScene" uid="uid://dy6qpsoh8w5xw" path="res://assets/models/KayKit_City_Builder_Bits_1.0_FREE/Assets/fbx/base.fbx" id="1_gldc4"]
+[ext_resource type="PackedScene" uid="uid://d3lka2g10wy1w" path="res://assets/models/KayKit_City_Builder_Bits_1.0_FREE/Assets/fbx/building_A.fbx" id="2_0cso3"]
+[ext_resource type="PackedScene" uid="uid://jsa25uy1htux" path="res://assets/models/KayKit_City_Builder_Bits_1.0_FREE/Assets/fbx/road_straight.fbx" id="3_2klcf"]
+
+[node name="Map" type="Node3D"]
+
+[node name="base" parent="." instance=ExtResource("1_gldc4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
+
+[node name="building_A" parent="." instance=ExtResource("2_0cso3")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, -1)
+
+[node name="road_straight" parent="." instance=ExtResource("3_2klcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1)
+
+[node name="road_straight2" parent="." instance=ExtResource("3_2klcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
