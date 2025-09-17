@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dftxs0nv73s7l"]
+
+[ext_resource type="ArrayMesh" uid="uid://v1uoj5m7idv4" path="res://assets/models/KayKit_City_Builder_Bits_1.0_FREE/Assets/obj/base.obj" id="1_ct4e6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ia4sj"]
+size = Vector3(2, 0.1, 2)
+
+[node name="Base" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
+shape = SubResource("BoxShape3D_ia4sj")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+mesh = ExtResource("1_ct4e6")
