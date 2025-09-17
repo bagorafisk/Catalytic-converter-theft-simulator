@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://cv5wm7qdnlqu0"]
+
+[ext_resource type="PackedScene" uid="uid://dftxs0nv73s7l" path="res://scenes/Tiles/base.tscn" id="1_nm5h8"]
+[ext_resource type="ArrayMesh" uid="uid://d1nypsktc4jvi" path="res://assets/models/KayKit_City_Builder_Bits_1.0_FREE/Assets/obj/building_A.obj" id="2_kkw1m"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_m5kkv"]
+radius = 0.06
+height = 0.3
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7o7wg"]
+size = Vector3(0.35, 0.275, 0.57)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q2uvp"]
+size = Vector3(0.13, 0.13, 0.13)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8e5v1"]
+size = Vector3(1.2, 1.645, 1.2)
+
+[node name="Building_A" instance=ExtResource("1_nm5h8")]
+
+[node name="MeshInstance3D" parent="." index="1"]
+mesh = ExtResource("2_kkw1m")
+
+[node name="HydrantCollision" type="CollisionShape3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.83021617, 0.07217176, 0.8308107)
+shape = SubResource("CapsuleShape3D_m5kkv")
+
+[node name="Garbage" type="CollisionShape3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.77264345, 0.1386527, -0.21923292)
+shape = SubResource("BoxShape3D_7o7wg")
+
+[node name="Box" type="CollisionShape3D" parent="." index="4"]
+transform = Transform3D(0.97314274, 0, 0.23020259, 0, 1, 0, -0.23020259, 0, 0.97314274, -0.709965, 0.046451412, 0.18548024)
+shape = SubResource("BoxShape3D_q2uvp")
+
+[node name="House" type="CollisionShape3D" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.73662925, 0)
+shape = SubResource("BoxShape3D_8e5v1")
