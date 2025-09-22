@@ -1,27 +1,71 @@
-[gd_scene load_steps=3 format=3 uid="uid://vgpqawo8suqd"]
+[gd_scene load_steps=5 format=3 uid="uid://vgpqawo8suqd"]
 
 [ext_resource type="ArrayMesh" uid="uid://gnjso4io4wck" path="res://assets/models/KayKit_City_Builder_Bits_1.0_FREE/Assets/obj/car_hatchback.obj" id="1_vherx"]
+[ext_resource type="Script" uid="uid://p6eo74cre8q4" path="res://scenes/cars/vehicle_body_3d.gd" id="1_y2rfj"]
 [ext_resource type="ArrayMesh" uid="uid://conglqexfdiev" path="res://assets/models/KayKit_City_Builder_Bits_1.0_FREE/Assets/obj/car_stationwagon_wheel_front_right.obj" id="2_y2rfj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y2rfj"]
+size = Vector3(0.43469238, 0.3215332, 0.82141113)
 
 [node name="car_wagon" type="Node"]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = ExtResource("1_vherx")
+[node name="VehicleBody3D" type="VehicleBody3D" parent="."]
+script = ExtResource("1_y2rfj")
 
-[node name="Wheels" type="Node" parent="."]
+[node name="VehicleWheel3D" type="VehicleWheel3D" parent="VehicleBody3D"]
+use_as_traction = true
+use_as_steering = true
+wheel_radius = 0.07
+wheel_rest_length = 0.02
+suspension_travel = 0.0
 
-[node name="WheelRR" type="MeshInstance3D" parent="Wheels"]
+[node name="WheelRR" type="MeshInstance3D" parent="VehicleBody3D/VehicleWheel3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.50290424)
 mesh = ExtResource("2_y2rfj")
+skeleton = NodePath("")
 
-[node name="WheelRL" type="MeshInstance3D" parent="Wheels"]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, -0.011880517)
+[node name="VehicleWheel3D2" type="VehicleWheel3D" parent="VehicleBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0155433, 0, 0, 0.0029092133)
+use_as_traction = true
+use_as_steering = true
+wheel_radius = 0.07
+wheel_rest_length = 0.02
+suspension_travel = 0.0
+
+[node name="WheelRL" type="MeshInstance3D" parent="VehicleBody3D/VehicleWheel3D2"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, -0.012)
 mesh = ExtResource("2_y2rfj")
+skeleton = NodePath("")
 
-[node name="WheelFL" type="MeshInstance3D" parent="Wheels"]
+[node name="VehicleWheel3D3" type="VehicleWheel3D" parent="VehicleBody3D"]
+use_as_traction = true
+wheel_radius = 0.07
+wheel_rest_length = 0.02
+suspension_travel = 0.0
+
+[node name="WheelFL" type="MeshInstance3D" parent="VehicleBody3D/VehicleWheel3D3"]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0.48946387)
 mesh = ExtResource("2_y2rfj")
+skeleton = NodePath("")
 
-[node name="WheelFR" type="MeshInstance3D" parent="Wheels"]
+[node name="VehicleWheel3D4" type="VehicleWheel3D" parent="VehicleBody3D"]
+use_as_traction = true
+wheel_radius = 0.07
+wheel_rest_length = 0.02
+suspension_travel = 0.0
+
+[node name="WheelFR" type="MeshInstance3D" parent="VehicleBody3D/VehicleWheel3D4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.00036793947)
 mesh = ExtResource("2_y2rfj")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="VehicleBody3D"]
+mesh = ExtResource("1_vherx")
+skeleton = NodePath("../..")
+
+[node name="Camera3D" type="Camera3D" parent="VehicleBody3D"]
+transform = Transform3D(-0.7264548, 0, -0.68721426, 0, 1, 0, 0.68721426, 0, -0.7264548, -1.0963267, 0.25124222, -0.63415635)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="VehicleBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0064086914, 0.14613143, -0.0033569336)
+shape = SubResource("BoxShape3D_y2rfj")
