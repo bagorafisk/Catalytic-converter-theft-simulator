@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://vgpqawo8suqd"]
+
+[ext_resource type="ArrayMesh" uid="uid://gnjso4io4wck" path="res://assets/models/KayKit_City_Builder_Bits_1.0_FREE/Assets/obj/car_hatchback.obj" id="1_vherx"]
+[ext_resource type="ArrayMesh" uid="uid://conglqexfdiev" path="res://assets/models/KayKit_City_Builder_Bits_1.0_FREE/Assets/obj/car_stationwagon_wheel_front_right.obj" id="2_y2rfj"]
+
+[node name="car_wagon" type="Node"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_vherx")
+
+[node name="Wheels" type="Node" parent="."]
+
+[node name="WheelRR" type="MeshInstance3D" parent="Wheels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.50290424)
+mesh = ExtResource("2_y2rfj")
+
+[node name="WheelRL" type="MeshInstance3D" parent="Wheels"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, -0.011880517)
+mesh = ExtResource("2_y2rfj")
+
+[node name="WheelFL" type="MeshInstance3D" parent="Wheels"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0.48946387)
+mesh = ExtResource("2_y2rfj")
+
+[node name="WheelFR" type="MeshInstance3D" parent="Wheels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.00036793947)
+mesh = ExtResource("2_y2rfj")
