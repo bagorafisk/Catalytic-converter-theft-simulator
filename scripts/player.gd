@@ -22,8 +22,8 @@ func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
 	# Get node references
-	head = $head
-	camera_1st = $head/Camera3D
+	head = $Head
+	camera_1st = $Head/Camera
 	spring_arm = $SpringArm
 	camera_3rd = $SpringArm/Camera
 	model = $Superhero_Male  # Adjust path based on your scene hierarchy
@@ -43,12 +43,11 @@ func _input(event: InputEvent) -> void:
 	
 	# Handle mouse movement based on current perspective
 	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+		rotate_y(-event.relative.x * mouse_sensitivity)  # Rotate player left/right
 		if is_first_person:
-			rotate_y(-event.relative.x * mouse_sensitivity)
 			head.rotate_x(-event.relative.y * mouse_sensitivity)
 			head.rotation.x = clamp(head.rotation.x, -1.5, 1.5)
 		else:
-			rotate_y(-event.relative.x * mouse_sensitivity)
 			spring_arm.rotation.x = clamp(spring_arm.rotation.x - event.relative.y * mouse_sensitivity, -1.0, 0.5)
 
 func _physics_process(delta: float) -> void:
@@ -65,13 +64,8 @@ func _physics_process(delta: float) -> void:
 	
 	input_dir = input_dir.normalized()
 	
-	# Convert 2D input to 3D direction
-	var direction: Vector3 = Vector3.ZERO
-	if is_first_person:
-		direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	else:
-		direction = (spring_arm.global_transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-		direction = direction.rotated(Vector3.UP, rotation.y)
+	# Convert 2D input to 3D direction using player's transform (consistent for both perspectives)
+	var direction: Vector3 = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	
 	# Handle sprinting
 	current_speed = sprint_speed if Input.is_action_pressed("sprint") else speed
