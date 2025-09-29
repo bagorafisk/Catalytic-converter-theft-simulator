@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dlg8da6kf4mik"]
+[gd_scene load_steps=6 format=3 uid="uid://dlg8da6kf4mik"]
 
 [ext_resource type="ArrayMesh" uid="uid://v1uoj5m7idv4" path="res://assets/models/KayKit_City_Builder_Bits_1.0_FREE/Assets/obj/base.obj" id="1_kwcxs"]
 [ext_resource type="PackedScene" uid="uid://vgpqawo8suqd" path="res://scenes/cars/car_wagon.tscn" id="2_yowm7"]
+[ext_resource type="PackedScene" uid="uid://jf6ihfei5eeh" path="res://assets/models/KayKit_City_Builder_Bits_1.0_FREE/Assets/fbx/box_B.fbx" id="3_efggw"]
+[ext_resource type="PackedScene" uid="uid://cj7nmmn1hjsuf" path="res://assets/models/KayKit_City_Builder_Bits_1.0_FREE/Assets/fbx/building_C.fbx" id="4_g8l4j"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_yowm7"]
 
@@ -17,3 +19,9 @@ mesh = ExtResource("1_kwcxs")
 shape = SubResource("WorldBoundaryShape3D_yowm7")
 
 [node name="car_wagon" parent="." instance=ExtResource("2_yowm7")]
+
+[node name="box_B" parent="." instance=ExtResource("3_efggw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.64725375, 2.605729e-08, 1.5914981)
+
+[node name="building_C" parent="." instance=ExtResource("4_g8l4j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4470303, 1.1920929e-07, 0.28635693)

@@ -1,6 +1,6 @@
 extends VehicleBody3D
 
-@export var engine_force_amount: float = 8000.0
+@export var engine_force_amount: float = 500.0
 @export var brake_force_amount: float = 50.0
 @export var steering_angle: float = 0.4
 
