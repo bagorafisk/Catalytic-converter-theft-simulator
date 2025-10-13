@@ -15,44 +15,46 @@ var head: Node3D
 var camera_1st: Camera3D
 var spring_arm: SpringArm3D
 var camera_3rd: Camera3D
-var model: Node3D  # Reference to the Superhero_Male model
+var model: Node3D  # Reference to the character model
+var animation_player: AnimationPlayer
+
+var was_on_floor: bool = true
+var jumping: bool = false
 
 func _ready() -> void:
-	# Capture mouse
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
-	# Get node references
 	head = $Head
 	camera_1st = $Head/Camera
 	spring_arm = $SpringArm
 	camera_3rd = $SpringArm/Camera
-	model = $Superhero_Male  # Adjust path based on your scene hierarchy
+	model = $Superhero_Male
+	animation_player = $Superhero_Male/AnimationPlayer
 	
-	# Initial setup
 	spring_arm.spring_length = 5.0
 	spring_arm.collision_mask = 1
-	switch_to_first_person()  # Start in 1st person
+	switch_to_first_person()
+
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("camera_switch"):  # Toggle perspective with Enter key
+	if event.is_action_pressed("camera_switch"):
 		is_first_person = !is_first_person
 		if is_first_person:
 			switch_to_first_person()
 		else:
 			switch_to_third_person()
 	
-	# Handle mouse movement based on current perspective
 	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
-		rotate_y(-event.relative.x * mouse_sensitivity)  # Rotate player left/right
+		rotate_y(-event.relative.x * mouse_sensitivity)
 		if is_first_person:
 			head.rotate_x(-event.relative.y * mouse_sensitivity)
 			head.rotation.x = clamp(head.rotation.x, -1.5, 1.5)
 		else:
 			spring_arm.rotation.x = clamp(spring_arm.rotation.x - event.relative.y * mouse_sensitivity, -1.0, 0.5)
 
+
 func _physics_process(delta: float) -> void:
-	# Handle movement direction
-	var input_dir: Vector2 = Vector2.ZERO
+	var input_dir := Vector2.ZERO
 	if Input.is_action_pressed("forward"):
 		input_dir.y -= 1
 	if Input.is_action_pressed("back"):
@@ -61,16 +63,11 @@ func _physics_process(delta: float) -> void:
 		input_dir.x -= 1
 	if Input.is_action_pressed("right"):
 		input_dir.x += 1
-	
 	input_dir = input_dir.normalized()
 	
-	# Convert 2D input to 3D direction using player's transform (consistent for both perspectives)
 	var direction: Vector3 = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	
-	# Handle sprinting
 	current_speed = sprint_speed if Input.is_action_pressed("sprint") else speed
 	
-	# Smooth movement with acceleration and friction
 	var target: Vector3 = direction * current_speed
 	target_velocity.x = lerp(velocity.x, target.x, acceleration * delta)
 	target_velocity.z = lerp(velocity.z, target.z, acceleration * delta)
@@ -79,30 +76,63 @@ func _physics_process(delta: float) -> void:
 		target_velocity.x = lerp(velocity.x, 0.0, friction * delta)
 		target_velocity.z = lerp(velocity.z, 0.0, friction * delta)
 	
-	# Apply gravity
+	# Gravity
 	if not is_on_floor():
 		target_velocity.y -= gravity * delta
 	
-	# Handle jumping
+	# Jump
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		target_velocity.y = jump_strength
-	
-	# Apply velocity and move
+		jumping = true
+		animation_player.play("Jump_Start")
+
+	# Apply velocity
 	velocity = target_velocity
 	move_and_slide()
+
+	# Landing detection
+	if was_on_floor == false and is_on_floor() and not jumping:
+		animation_player.play("Jump_Land")
+
+	if is_on_floor():
+		jumping = false
+
+	# --- Animation State Machine ---
+	if not is_on_floor():
+		if velocity.y > 0:
+			animation_player.play("Jump_Start")
+		else:
+			animation_player.play("Jump")
+	else:
+		var moving := input_dir.length() > 0.1
+		if moving:
+			if Input.is_action_pressed("sprint"):
+				animation_player.play("Sprint")
+			else:
+				animation_player.play("Walk")
+		else:
+			animation_player.play("Idle")
+
+	was_on_floor = is_on_floor()
+
 
 func switch_to_first_person() -> void:
 	camera_1st.current = true
 	camera_3rd.current = false
-	model.visible = false  # Hide model in 1st person
+	model.visible = false
 	is_first_person = true
+
 
 func switch_to_third_person() -> void:
 	camera_3rd.current = true
 	camera_1st.current = false
-	model.visible = true  # Show model in 3rd person
+	model.visible = true
 	is_first_person = false
+
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED else Input.MOUSE_MODE_CAPTURED)
+		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		else:
+			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
