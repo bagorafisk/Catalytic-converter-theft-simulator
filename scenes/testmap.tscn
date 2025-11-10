@@ -1,40 +1,27 @@
-[gd_scene load_steps=5 format=3 uid="uid://dlg8da6kf4mik"]
+[gd_scene load_steps=6 format=3 uid="uid://dlg8da6kf4mik"]
 
-[ext_resource type="ArrayMesh" uid="uid://v1uoj5m7idv4" path="res://assets/models/KayKit_City_Builder_Bits_1.0_FREE/Assets/obj/base.obj" id="1_5wgtu"]
-[ext_resource type="PackedScene" uid="uid://ecfc2snxkphw" path="res://scenes/player.tscn" id="2_efggw"]
-[ext_resource type="ArrayMesh" uid="uid://d1nypsktc4jvi" path="res://assets/models/KayKit_City_Builder_Bits_1.0_FREE/Assets/obj/building_A.obj" id="3_g8l4j"]
+[ext_resource type="ArrayMesh" uid="uid://v1uoj5m7idv4" path="res://assets/models/KayKit_City_Builder_Bits_1.0_FREE/Assets/obj/base.obj" id="1_kwcxs"]
+[ext_resource type="PackedScene" uid="uid://vgpqawo8suqd" path="res://scenes/cars/car_wagon.tscn" id="2_yowm7"]
+[ext_resource type="PackedScene" uid="uid://jf6ihfei5eeh" path="res://assets/models/KayKit_City_Builder_Bits_1.0_FREE/Assets/fbx/box_B.fbx" id="3_efggw"]
+[ext_resource type="PackedScene" uid="uid://cj7nmmn1hjsuf" path="res://assets/models/KayKit_City_Builder_Bits_1.0_FREE/Assets/fbx/building_C.fbx" id="4_g8l4j"]
 
-[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_6fk1w"]
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_yowm7"]
 
-[node name="Testmap" type="Node3D"]
+[node name="testmap" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 20, 0, -0.1, 0)
-mesh = ExtResource("1_5wgtu")
-
-[node name="Player" parent="." instance=ExtResource("2_efggw")]
-transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 2, 0)
-speed = 4.0
-sprint_speed = 8.0
-jump_strength = 2.0
-
-[node name="BuildingA" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2)
-mesh = ExtResource("3_g8l4j")
-
-[node name="BuildingA2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -6)
-mesh = ExtResource("3_g8l4j")
-
-[node name="BuildingA3" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -4)
-mesh = ExtResource("3_g8l4j")
+transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 20, 0, -0.4, 0)
+mesh = ExtResource("1_kwcxs")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-shape = SubResource("WorldBoundaryShape3D_6fk1w")
+shape = SubResource("WorldBoundaryShape3D_yowm7")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.49999997, 0.86602545, 0, -0.86602545, 0.49999997, 0, 4, 0)
-light_energy = 0.505
+[node name="car_wagon" parent="." instance=ExtResource("2_yowm7")]
+
+[node name="box_B" parent="." instance=ExtResource("3_efggw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.64725375, 2.605729e-08, 1.5914981)
+
+[node name="building_C" parent="." instance=ExtResource("4_g8l4j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4470303, 1.1920929e-07, 0.28635693)
