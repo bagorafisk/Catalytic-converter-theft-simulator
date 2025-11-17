@@ -95,3 +95,51 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -6)
 
 [node name="Base2" parent="." instance=ExtResource("9_p7tei")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -8)
+
+[node name="Road_straight9" parent="." instance=ExtResource("2_be0no")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4, 0, 2)
+
+[node name="Road_straight10" parent="." instance=ExtResource("2_be0no")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -6, 0, 2)
+
+[node name="Road_junction2" parent="." instance=ExtResource("3_blm8a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 2)
+
+[node name="Building_A2" parent="." instance=ExtResource("5_wslke")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="Building_d6" parent="." instance=ExtResource("8_c00ee")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -6, 0, 0)
+
+[node name="Road_straight_crossing2" parent="." instance=ExtResource("4_mlgqr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0)
+
+[node name="Road_straight11" parent="." instance=ExtResource("2_be0no")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -2)
+
+[node name="Road_straight12" parent="." instance=ExtResource("2_be0no")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -4)
+
+[node name="Road_straight13" parent="." instance=ExtResource("2_be0no")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -6)
+
+[node name="Road_straight14" parent="." instance=ExtResource("2_be0no")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -8)
+
+[node name="Building_C3" parent="." instance=ExtResource("7_n1psn")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -6, 0, -2)
+
+[node name="Building_d7" parent="." instance=ExtResource("8_c00ee")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -6, 0, -4)
+
+[node name="Building_B2" parent="." instance=ExtResource("6_gw3fx")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -6, 0, -6)
+
+[node name="Base3" parent="." instance=ExtResource("9_p7tei")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -2)
+
+[node name="Base4" parent="." instance=ExtResource("9_p7tei")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+
+[node name="Base5" parent="." instance=ExtResource("9_p7tei")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -6)
