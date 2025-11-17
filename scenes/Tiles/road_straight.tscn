@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5gmj30suiek7"]
+
+[ext_resource type="PackedScene" uid="uid://dftxs0nv73s7l" path="res://scenes/Tiles/base.tscn" id="1_lh66q"]
+[ext_resource type="ArrayMesh" uid="uid://b7kyv5me3cxwq" path="res://assets/models/KayKit_City_Builder_Bits_1.0_FREE/Assets/obj/road_straight.obj" id="2_6tasm"]
+
+[node name="Road_straight" instance=ExtResource("1_lh66q")]
+
+[node name="MeshInstance3D" parent="." index="1"]
+mesh = ExtResource("2_6tasm")

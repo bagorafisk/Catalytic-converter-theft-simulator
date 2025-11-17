@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://da4nhfyu6bvpt"]
+
+[ext_resource type="PackedScene" uid="uid://dftxs0nv73s7l" path="res://scenes/Tiles/base.tscn" id="1_5v82j"]
+[ext_resource type="ArrayMesh" uid="uid://dbbwnogx0v5y1" path="res://assets/models/KayKit_City_Builder_Bits_1.0_FREE/Assets/obj/road_corner_curved.obj" id="2_iq5vr"]
+
+[node name="Road_corner_curved" instance=ExtResource("1_5v82j")]
+
+[node name="MeshInstance3D" parent="." index="1"]
+mesh = ExtResource("2_iq5vr")

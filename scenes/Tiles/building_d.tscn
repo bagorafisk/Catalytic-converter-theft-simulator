@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://c1ppthyq68p41"]
+
+[ext_resource type="PackedScene" uid="uid://dftxs0nv73s7l" path="res://scenes/Tiles/base.tscn" id="1_xo0js"]
+[ext_resource type="ArrayMesh" uid="uid://bfm4rqt7t5jmu" path="res://assets/models/KayKit_City_Builder_Bits_1.0_FREE/Assets/obj/building_D.obj" id="2_njxkx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rxcii"]
+size = Vector3(1.5968139, 2.2805078, 1.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3bftx"]
+size = Vector3(0.3998413, 0.08721924, 0.1503601)
+
+[node name="Building_d" instance=ExtResource("1_xo0js")]
+
+[node name="MeshInstance3D" parent="." index="1"]
+mesh = ExtResource("2_njxkx")
+
+[node name="House" type="CollisionShape3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.002252221, 1.109282, 0)
+shape = SubResource("BoxShape3D_rxcii")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5139699, 0.056854248, 0.9452503)
+shape = SubResource("BoxShape3D_3bftx")

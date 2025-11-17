@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cuugg0gickni8"]
+
+[ext_resource type="PackedScene" uid="uid://dftxs0nv73s7l" path="res://scenes/Tiles/base.tscn" id="1_v700n"]
+[ext_resource type="ArrayMesh" uid="uid://b1dp1kp6teqw1" path="res://assets/models/KayKit_City_Builder_Bits_1.0_FREE/Assets/obj/road_junction.obj" id="2_ib2ap"]
+
+[node name="Road_junction" instance=ExtResource("1_v700n")]
+
+[node name="MeshInstance3D" parent="." index="1"]
+mesh = ExtResource("2_ib2ap")

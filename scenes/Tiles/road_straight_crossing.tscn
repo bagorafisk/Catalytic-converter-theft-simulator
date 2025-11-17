@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8ugw64focnou"]
+
+[ext_resource type="PackedScene" uid="uid://dftxs0nv73s7l" path="res://scenes/Tiles/base.tscn" id="1_b47pq"]
+[ext_resource type="ArrayMesh" uid="uid://s4i5o05rktcv" path="res://assets/models/KayKit_City_Builder_Bits_1.0_FREE/Assets/obj/road_straight_crossing.obj" id="2_67qcn"]
+
+[node name="Road_straight_crossing" instance=ExtResource("1_b47pq")]
+
+[node name="MeshInstance3D" parent="." index="1"]
+mesh = ExtResource("2_67qcn")
