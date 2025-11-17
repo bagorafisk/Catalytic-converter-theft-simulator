@@ -1,8 +1,8 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1762761834
+::res://::1763367475
 icon.svg::CompressedTexture2D/CompressedTexture2D::8811529402559056035::1760336524::1760336830::1::::<><><>0<>0<>d9d41dc1aec15a6a07bab8e0434ca3d7<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://assets/::1762761781
-::res://assets/AllSkyFree_Skyboxes/::1762761781
+::res://assets/AllSkyFree_Skyboxes/::1762761863
 AllSkyFree_Environment.tres::ShaderMaterial::-1::1762761781::0::1::::<><><>0<>0<><>::
 AllSky_DemoEnvironment.fbx::PackedScene::5645420512541501584::1762761781::1762761863::1::::<><><>0<>0<>143ad8ecfb726cfa89de5df6a1dc3b43<>res://.godot/imported/AllSky_DemoEnvironment.fbx-1b7c3118173151a3da71982938a01090.scn::
 AllSky_DemoEnvironment.obj::Mesh::7189041099496302629::1762761781::1762761862::1::::<><><>0<>0<>f83ed5c3e47d86c90a291f2738ef67ca<>res://.godot/imported/AllSky_DemoEnvironment.obj-4522d18906e1bc49e1a9cad17d47a613.mesh<*>res://.godot/imported/AllSky_DemoEnvironment.obj-4522d18906e1bc49e1a9cad17d47a613.mesh::
@@ -218,8 +218,8 @@ watertower.obj::Mesh::7683049369975806143::1760336524::1760336832::1::::<><><>0<
 citybits_texture.png::CompressedTexture2D::8830437282853493310::1760336524::1760336828::1::::<><><>0<>0<>41b88adbf435d673befba94f37dcb3f4<>res://.godot/imported/citybits_texture.png-dc2e2114333a256f5c44ebe3581ea8ba.ctex::
 ::res://assets/sky/::1762761781
 AllSkyFree_Sky_OvercastLow.tscn::PackedScene::-1::1762761781::0::1::::<><><>0<>0<><>::res://AllSkyFree_Skyboxes/AllSky_Overcast4_Low.png<>res://AllSkyFree_DemoLandsacpe.tscn
-::res://scenes/::1762761781
-map.tscn::PackedScene::184152904763279165::1762761781::0::1::::<><><>0<>0<><>::uid://l72dilh4nl5u::::res://assets/AllSkyFree_Skyboxes/AllSky_Overcast4_Low.png<>uid://c5gmj30suiek7::::res://scenes/Tiles/road_straight.tscn<>uid://cuugg0gickni8::::res://scenes/Tiles/road_junction.tscn<>uid://c8ugw64focnou::::res://scenes/Tiles/road_straight_crossing.tscn<>uid://cv5wm7qdnlqu0::::res://scenes/Tiles/building_a.tscn<>uid://bjudk0sa6ntoj::::res://scenes/Tiles/building_b.tscn<>uid://curekdsiojk64::::res://scenes/Tiles/building_c.tscn<>uid://c1ppthyq68p41::::res://scenes/Tiles/building_d.tscn<>uid://dftxs0nv73s7l::::res://scenes/Tiles/base.tscn
+::res://scenes/::1762777028
+map.tscn::PackedScene::184152904763279165::1762777028::0::1::::<><><>0<>0<><>::uid://l72dilh4nl5u::::res://assets/AllSkyFree_Skyboxes/AllSky_Overcast4_Low.png<>uid://c5gmj30suiek7::::res://scenes/Tiles/road_straight.tscn<>uid://cuugg0gickni8::::res://scenes/Tiles/road_junction.tscn<>uid://c8ugw64focnou::::res://scenes/Tiles/road_straight_crossing.tscn<>uid://cv5wm7qdnlqu0::::res://scenes/Tiles/building_a.tscn<>uid://bjudk0sa6ntoj::::res://scenes/Tiles/building_b.tscn<>uid://curekdsiojk64::::res://scenes/Tiles/building_c.tscn<>uid://c1ppthyq68p41::::res://scenes/Tiles/building_d.tscn<>uid://dftxs0nv73s7l::::res://scenes/Tiles/base.tscn
 ::res://scenes/Tiles/::1762761781
 base.tscn::PackedScene::7550859415884757715::1762761781::0::1::::<><><>0<>0<><>::uid://v1uoj5m7idv4::::res://assets/models/KayKit_City_Builder_Bits_1.0_FREE/Assets/obj/base.obj
 building_a.tscn::PackedScene::6310097325392601865::1762761781::0::1::::<><><>0<>0<><>::uid://dftxs0nv73s7l::::res://scenes/Tiles/base.tscn<>uid://d1nypsktc4jvi::::res://assets/models/KayKit_City_Builder_Bits_1.0_FREE/Assets/obj/building_A.obj
