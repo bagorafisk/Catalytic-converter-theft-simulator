@@ -1,5 +1,7 @@
 extends CharacterBody3D
 
+@onready var area_3d: Area3D = $Area3D
+
 @export var speed: float = 7.0
 @export var sprint_speed: float = 12.0
 @export var jump_strength: float = 4.5
@@ -20,6 +22,8 @@ var animation_player: AnimationPlayer
 
 var was_on_floor: bool = true
 var jumping: bool = false
+var near_car = null
+var in_car = false
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -54,6 +58,12 @@ func _input(event: InputEvent) -> void:
 
 
 func _physics_process(delta: float) -> void:
+	if Input.is_action_just_pressed("interact"):
+		if not in_car and near_car:
+			enter_car(near_car)
+		elif in_car:
+			exit_car()
+	
 	var input_dir := Vector2.ZERO
 	if Input.is_action_pressed("forward"):
 		input_dir.y -= 1
@@ -136,3 +146,15 @@ func _unhandled_input(event: InputEvent) -> void:
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		else:
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+			
+func enter_car(car):
+	in_car = true
+	$Camera3D.current = false
+	car.start_driving()
+	hide()
+	
+func exit_car():
+	in_car = false
+	show()
+	$Camera3D.current = true
+	near_car.stop_driving()

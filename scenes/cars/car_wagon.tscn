@@ -10,6 +10,7 @@ size = Vector3(0.43469238, 0.3215332, 0.82141113)
 [node name="car_wagon" type="Node"]
 
 [node name="VehicleBody3D" type="VehicleBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.09183255, 0)
 script = ExtResource("1_y2rfj")
 
 [node name="VehicleWheel3D4" type="VehicleWheel3D" parent="VehicleBody3D"]
@@ -37,7 +38,7 @@ transform = Transform3D(-1, 0, -8.742278e-08, -1.01724025e-08, 0.9932073, 0.1163
 fov = 93.85714
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="VehicleBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0064086914, 0.14613143, -0.0033569336)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0064086914, 0.16700679, -0.0033569336)
 shape = SubResource("BoxShape3D_y2rfj")
 
 [node name="VehicleWheel3D5" type="VehicleWheel3D" parent="VehicleBody3D"]

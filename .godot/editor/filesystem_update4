@@ -1,1 +1,4 @@
-res://scenes/map.tscn
+res://game.tscn
+res://scenes/cars/vehicle_body_3d.gd
+res://caar_wagon.tscn
+res://scripts/player.gd
