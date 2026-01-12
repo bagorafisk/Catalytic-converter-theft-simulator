@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cvg8a8lnuein"]
+[gd_scene load_steps=16 format=3 uid="uid://cvg8a8lnuein"]
 
 [ext_resource type="Texture2D" uid="uid://l72dilh4nl5u" path="res://assets/AllSkyFree_Skyboxes/AllSky_Overcast4_Low.png" id="1_4xfga"]
 [ext_resource type="PackedScene" uid="uid://c5gmj30suiek7" path="res://scenes/Tiles/road_straight.tscn" id="2_be0no"]
@@ -23,6 +23,9 @@ sky = SubResource("Sky_hrmi8")
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_paxxb"]
 
 [sub_resource type="Compositor" id="Compositor_gldc4"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_be0no"]
+plane = Plane(0, 0.005, 0, 0)
 
 [node name="Map" type="Node3D"]
 
@@ -5864,3 +5867,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 0, -92)
 
 [node name="Base567" parent="." instance=ExtResource("9_p7tei")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 0, -92)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Base567"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42, 0.012823343, 92)
+shape = SubResource("WorldBoundaryShape3D_be0no")
