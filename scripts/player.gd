@@ -2,8 +2,8 @@ extends CharacterBody3D
 
 signal enter_car
 
-@export var speed: float = 7.0
-@export var sprint_speed: float = 12.0
+@export var speed: float = 1.5
+@export var sprint_speed: float = 3.0
 @export var jump_strength: float = 4.5
 @export var gravity: float = 9.82
 @export var mouse_sensitivity: float = 0.002

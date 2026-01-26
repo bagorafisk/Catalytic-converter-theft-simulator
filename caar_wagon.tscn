@@ -46,6 +46,7 @@ brake = 200.0
 use_as_steering = true
 wheel_radius = 0.07
 wheel_rest_length = 0.02
+suspension_travel = 2.0
 suspension_stiffness = 20.0
 damping_compression = 2.0
 damping_relaxation = 2.0
