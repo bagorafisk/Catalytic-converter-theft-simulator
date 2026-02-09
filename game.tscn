@@ -11,7 +11,7 @@ script = ExtResource("1_fc0e3")
 
 [node name="Map" parent="." unique_id=104524709 instance=ExtResource("1_80nbo")]
 
-[node name="Player" parent="." unique_id=103122698 instance=ExtResource("2_e2o6t")]
+[node name="Player" parent="." unique_id=103122698 groups=["player"] instance=ExtResource("2_e2o6t")]
 transform = Transform3D(0.225, 0, 0, 0, 0.225, 0, 0, 0, 0.225, -0.80841017, 0, -1.1903476)
 
 [node name="caar_wagon" parent="." unique_id=1338328418 instance=ExtResource("3_feb5d")]
@@ -21,3 +21,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32010704, 0.24398881, 0)
 
 [connection signal="enter_car" from="Player" to="caar_wagon" method="_on_player_enter_car"]
 [connection signal="exit_car" from="caar_wagon" to="." method="_on_caar_wagon_exit_car"]
+[connection signal="off_car" from="caar_wagon" to="HUD" method="_on_caar_wagon_off_car"]
+[connection signal="on_car" from="caar_wagon" to="HUD" method="_on_caar_wagon_on_car"]
