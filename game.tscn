@@ -1,20 +1,23 @@
-[gd_scene load_steps=5 format=3 uid="uid://cqiu0jtreof3e"]
+[gd_scene format=3 uid="uid://cqiu0jtreof3e"]
 
 [ext_resource type="PackedScene" uid="uid://cvg8a8lnuein" path="res://scenes/map.tscn" id="1_80nbo"]
 [ext_resource type="Script" uid="uid://ws5jam7nxu7u" path="res://game.gd" id="1_fc0e3"]
 [ext_resource type="PackedScene" uid="uid://ecfc2snxkphw" path="res://scenes/player.tscn" id="2_e2o6t"]
 [ext_resource type="PackedScene" uid="uid://jgis82infr3q" path="res://caar_wagon.tscn" id="3_feb5d"]
+[ext_resource type="PackedScene" uid="uid://36dgyd7rkif4" path="res://hud.tscn" id="5_7jktm"]
 
-[node name="game" type="Node3D"]
+[node name="game" type="Node3D" unique_id=1951582516]
 script = ExtResource("1_fc0e3")
 
-[node name="Map" parent="." instance=ExtResource("1_80nbo")]
+[node name="Map" parent="." unique_id=104524709 instance=ExtResource("1_80nbo")]
 
-[node name="Player" parent="." instance=ExtResource("2_e2o6t")]
+[node name="Player" parent="." unique_id=103122698 instance=ExtResource("2_e2o6t")]
 transform = Transform3D(0.225, 0, 0, 0, 0.225, 0, 0, 0, 0.225, -0.80841017, 0, -1.1903476)
 
-[node name="caar_wagon" parent="." instance=ExtResource("3_feb5d")]
+[node name="caar_wagon" parent="." unique_id=1338328418 instance=ExtResource("3_feb5d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32010704, 0.24398881, 0)
+
+[node name="HUD" parent="." unique_id=460138118 instance=ExtResource("5_7jktm")]
 
 [connection signal="enter_car" from="Player" to="caar_wagon" method="_on_player_enter_car"]
 [connection signal="exit_car" from="caar_wagon" to="." method="_on_caar_wagon_exit_car"]

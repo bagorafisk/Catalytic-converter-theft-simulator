@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://36dgyd7rkif4"]
+
+[node name="HUD" type="Node2D" unique_id=460138118]
+
+[node name="Label" type="Label" parent="." unique_id=2059802279]
+offset_left = 523.0
+offset_top = 427.0
+offset_right = 593.0
+offset_bottom = 450.0
+text = "Enter car"
