@@ -28,14 +28,14 @@ func _physics_process(delta: float) -> void:
 		elif Input.is_action_pressed("ui_right"):
 			steer = -steering_angle
 		
-		if Input.is_action_just_pressed("f"):
-			in_car = false
-			camera_3d.current = false
-			exit_car.emit()
 		if Input.is_action_just_pressed("reset"):
 			rotation.x = 0
 			rotation.z = 0
 			position.y += 1
+	if Input.is_action_just_pressed("f"):
+		in_car = false
+		camera_3d.current = false
+		exit_car.emit()
 
 	engine_force = throttle
 	brake = brake_force_amount if Input.is_action_pressed("ui_select") else 0.0

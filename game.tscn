@@ -10,16 +10,28 @@
 script = ExtResource("1_fc0e3")
 
 [node name="Map" parent="." unique_id=104524709 instance=ExtResource("1_80nbo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.014410496, 0.0060184, 0.0002541542)
 
-[node name="Player" parent="." unique_id=103122698 groups=["player"] instance=ExtResource("2_e2o6t")]
+[node name="Player" parent="." unique_id=103122698 instance=ExtResource("2_e2o6t")]
 transform = Transform3D(0.225, 0, 0, 0, 0.225, 0, 0, 0, 0.225, -0.80841017, 0, -1.1903476)
 
 [node name="caar_wagon" parent="." unique_id=1338328418 instance=ExtResource("3_feb5d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32010704, 0.24398881, 0)
 
-[node name="HUD" parent="." unique_id=460138118 instance=ExtResource("5_7jktm")]
+[node name="CanvasLayer" type="Control" parent="." unique_id=1659107834]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HUD" parent="CanvasLayer" unique_id=460138118 instance=ExtResource("5_7jktm")]
+layout_mode = 1
+size_flags_horizontal = 6
+size_flags_vertical = 6
 
 [connection signal="enter_car" from="Player" to="caar_wagon" method="_on_player_enter_car"]
 [connection signal="exit_car" from="caar_wagon" to="." method="_on_caar_wagon_exit_car"]
-[connection signal="off_car" from="caar_wagon" to="HUD" method="_on_caar_wagon_off_car"]
-[connection signal="on_car" from="caar_wagon" to="HUD" method="_on_caar_wagon_on_car"]
+[connection signal="off_car" from="caar_wagon" to="CanvasLayer/HUD" method="_on_caar_wagon_off_car"]
+[connection signal="on_car" from="caar_wagon" to="CanvasLayer/HUD" method="_on_caar_wagon_on_car"]
