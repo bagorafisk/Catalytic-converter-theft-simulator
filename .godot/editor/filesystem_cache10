@@ -1,12 +1,15 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1770623089
-caar_wagon.tscn::PackedScene::644605514860416836::1769419162::0::1::::<><><>0<>0<><>::uid://p6eo74cre8q4::::res://scenes/cars/vehicle_body_3d.gd<>uid://conglqexfdiev::::res://assets/models/KayKit_City_Builder_Bits_1.0_FREE/Assets/obj/car_stationwagon_wheel_front_right.obj<>uid://gnjso4io4wck::::res://assets/models/KayKit_City_Builder_Bits_1.0_FREE/Assets/obj/car_hatchback.obj
-game.gd::GDScript::1583150961547813548::1768813210::0::1::::<>Node3D<><>0<>0<><>::
-game.tscn::PackedScene::5913637375169889888::1769419203::0::1::::<><><>0<>0<><>::uid://cvg8a8lnuein::::res://scenes/map.tscn<>uid://ws5jam7nxu7u::::res://game.gd<>uid://ecfc2snxkphw::::res://scenes/player.tscn<>uid://jgis82infr3q::::res://caar_wagon.tscn
+::res://::1773042399
+caar_wagon.tscn::PackedScene::644605514860416836::1770626580::0::1::::<><><>0<>0<><>::uid://p6eo74cre8q4::::res://scenes/cars/vehicle_body_3d.gd<>uid://conglqexfdiev::::res://assets/models/KayKit_City_Builder_Bits_1.0_FREE/Assets/obj/car_stationwagon_wheel_front_right.obj<>uid://gnjso4io4wck::::res://assets/models/KayKit_City_Builder_Bits_1.0_FREE/Assets/obj/car_hatchback.obj
+game.gd::GDScript::1583150961547813548::1770626675::0::1::::<>Node3D<><>0<>0<><>::
+game.tscn::PackedScene::5913637375169889888::1771235481::0::1::::<><><>0<>0<><>::uid://cvg8a8lnuein::::res://scenes/map.tscn<>uid://ws5jam7nxu7u::::res://game.gd<>uid://ecfc2snxkphw::::res://scenes/player.tscn<>uid://jgis82infr3q::::res://caar_wagon.tscn<>uid://36dgyd7rkif4::::res://hud.tscn
 hatchback.tscn::PackedScene::8233712909889851946::1770025116::0::1::::<><><>0<>0<><>::uid://gnjso4io4wck::::res://assets/models/KayKit_City_Builder_Bits_1.0_FREE/Assets/obj/car_hatchback.obj<>uid://c76mccyd8uccy::::res://assets/models/KayKit_City_Builder_Bits_1.0_FREE/Assets/obj/car_hatchback_wheel_rear_right.obj
+hud.gd::GDScript::8895936159065854105::1771229793::0::1::::<>Control<><>0<>0<><>::
+hud.tscn::PackedScene::2029477464654359047::1771235541::0::1::::<><><>0<>0<><>::uid://dy0i1e08ti5y8::::res://hud.gd<>uid://dqltosbe13nl1::::res://assets/o411456v54_GWS_12-125_with_standard_side_handle_dyn.webp
 icon.svg::CompressedTexture2D/CompressedTexture2D::8811529402559056035::1765179264::1765179264::1::::<><><>0<>0<>d9d41dc1aec15a6a07bab8e0434ca3d7<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile::-1::1765179263::0::1::::<><><>0<>0<><>::
-::res://assets/::1765179264
+::res://assets/::1770624604
+o411456v54_GWS_12-125_with_standard_side_handle_dyn.webp::CompressedTexture2D::8306171275742419588::1770624595::1770624604::1::::<><><>0<>0<>e96d559b97045d0099cea61501fca127<>res://.godot/imported/o411456v54_GWS_12-125_with_standard_side_handle_dyn.webp-e2c62001faf3bb3a724a19f73b5e8c10.ctex::
 ::res://assets/AllSkyFree_Skyboxes/::1765179264
 AllSkyFree_Environment.tres::ShaderMaterial::-1::1765179263::0::1::::<><><>0<>0<><>::
 AllSky_DemoEnvironment.fbx::PackedScene::5645420512541501584::1765179263::1765179263::1::::<><><>0<>0<>143ad8ecfb726cfa89de5df6a1dc3b43<>res://.godot/imported/AllSky_DemoEnvironment.fbx-1b7c3118173151a3da71982938a01090.scn::
@@ -531,15 +534,15 @@ house4_tex3.png::CompressedTexture2D::900814331154282472::1765179264::1765179416
 house5_tex1.png::CompressedTexture2D::7934584131004593558::1765179264::1765179416::1::::<><><>0<>0<>d850f89457bb6584a96fc1159fef7c32<>res://.godot/imported/house5_tex1.png-a4da9d1d948754b885183b4ed35985ba.ctex::
 house5_tex2.png::CompressedTexture2D::1260663786753547889::1765179264::1765179415::1::::<><><>0<>0<>7f65a2429afd42cfd7a7cbb5d5e86361<>res://.godot/imported/house5_tex2.png-0c132ee0e7f4b6aa424f7c3a07d8f33b.ctex::
 house5_tex3.png::CompressedTexture2D::1590616487120198226::1765179264::1765179415::1::::<><><>0<>0<>c474dd9cb4bb9ffd8c7db60634c2d445<>res://.godot/imported/house5_tex3.png-b04aaebbdec6c7ae0a44246a02badde2.ctex::
-::res://scenes/::1768810290
+::res://scenes/::1770626746
 animation_library_godot_standard.tscn::PackedScene::7898220811085846311::1765179264::0::1::::<><><>0<>0<><>::uid://dmf2uiqtv1ug2::::res://assets/animations/Animation Library[Standard]/Godot/AnimationLibrary_Godot_Standard.glb<>uid://d0nobmtip8ay0::::res://assets/models/Universal Base Characters[Standard]/Base Characters/Godot/T_Eye_Brown.png<>uid://cuhni6kv73qng::::res://assets/models/Universal Base Characters[Standard]/Base Characters/Godot/T_Eye_Normal.png<>uid://bybjbs2otm2ow::::res://assets/models/Universal Base Characters[Standard]/Base Characters/Godot/T_Hair_1_BaseColor.png<>uid://b0r11frmucgt5::::res://assets/models/Universal Base Characters[Standard]/Base Characters/Godot/T_Hair_1_Normal.png
 map.tscn::PackedScene::184152904763279165::1765183725::0::1::::<><><>0<>0<><>::uid://l72dilh4nl5u::::res://assets/AllSkyFree_Skyboxes/AllSky_Overcast4_Low.png<>uid://c5gmj30suiek7::::res://scenes/Tiles/road_straight.tscn<>uid://cuugg0gickni8::::res://scenes/Tiles/road_junction.tscn<>uid://c8ugw64focnou::::res://scenes/Tiles/road_straight_crossing.tscn<>uid://cv5wm7qdnlqu0::::res://scenes/Tiles/building_a.tscn<>uid://bjudk0sa6ntoj::::res://scenes/Tiles/building_b.tscn<>uid://curekdsiojk64::::res://scenes/Tiles/building_c.tscn<>uid://c1ppthyq68p41::::res://scenes/Tiles/building_d.tscn<>uid://dftxs0nv73s7l::::res://scenes/Tiles/base.tscn
-player.tscn::PackedScene::285192733170631456::1768810290::0::1::::<><><>0<>0<><>::uid://ckwcd56ipwfhp::::res://scripts/player.gd<>uid://dmf2uiqtv1ug2::::res://assets/animations/Animation Library[Standard]/Godot/AnimationLibrary_Godot_Standard.glb
+player.tscn::PackedScene::285192733170631456::1770626746::0::1::::<><><>0<>0<><>::uid://ckwcd56ipwfhp::::res://scripts/player.gd<>uid://dmf2uiqtv1ug2::::res://assets/animations/Animation Library[Standard]/Godot/AnimationLibrary_Godot_Standard.glb
 testmap.tscn::PackedScene::7945734664116152834::1765179264::0::1::::<><><>0<>0<><>::uid://v1uoj5m7idv4::::res://assets/models/KayKit_City_Builder_Bits_1.0_FREE/Assets/obj/base.obj<>uid://vgpqawo8suqd::::res://scenes/cars/car_wagon.tscn<>uid://jf6ihfei5eeh::::res://assets/models/KayKit_City_Builder_Bits_1.0_FREE/Assets/fbx/box_B.fbx<>uid://cj7nmmn1hjsuf::::res://assets/models/KayKit_City_Builder_Bits_1.0_FREE/Assets/fbx/building_C.fbx
-::res://scenes/cars/::1769419203
+::res://scenes/cars/::1771230850
 car_wagon.gd::GDScript::6752132179592537639::1765179264::0::1::::<>Node<><>0<>0<><>::
 car_wagon.tscn::PackedScene::1487291345183637331::1765179264::0::1::::<><><>0<>0<><>::uid://gnjso4io4wck::::res://assets/models/KayKit_City_Builder_Bits_1.0_FREE/Assets/obj/car_hatchback.obj<>uid://p6eo74cre8q4::::res://scenes/cars/vehicle_body_3d.gd<>uid://conglqexfdiev::::res://assets/models/KayKit_City_Builder_Bits_1.0_FREE/Assets/obj/car_stationwagon_wheel_front_right.obj
-vehicle_body_3d.gd::GDScript::1117097959692390385::1769419203::0::1::::<>VehicleBody3D<><>0<>0<><>::
+vehicle_body_3d.gd::GDScript::1117097959692390385::1771230850::0::1::::<>VehicleBody3D<><>0<>0<><>::
 ::res://scenes/Tiles/::1765179264
 base.tscn::PackedScene::7550859415884757715::1765179264::0::1::::<><><>0<>0<><>::uid://v1uoj5m7idv4::::res://assets/models/KayKit_City_Builder_Bits_1.0_FREE/Assets/obj/base.obj
 building_a.tscn::PackedScene::6310097325392601865::1765179264::0::1::::<><><>0<>0<><>::uid://dftxs0nv73s7l::::res://scenes/Tiles/base.tscn<>uid://d1nypsktc4jvi::::res://assets/models/KayKit_City_Builder_Bits_1.0_FREE/Assets/obj/building_A.obj
@@ -552,5 +555,5 @@ road_junction.tscn::PackedScene::6218282134667218005::1765179264::0::1::::<><><>
 road_straight.tscn::PackedScene::6891639129228672132::1765179264::0::1::::<><><>0<>0<><>::uid://dftxs0nv73s7l::::res://scenes/Tiles/base.tscn<>uid://b7kyv5me3cxwq::::res://assets/models/KayKit_City_Builder_Bits_1.0_FREE/Assets/obj/road_straight.obj
 road_straight_crossing.tscn::PackedScene::7130766025214135284::1765179264::0::1::::<><><>0<>0<><>::uid://dftxs0nv73s7l::::res://scenes/Tiles/base.tscn<>uid://s4i5o05rktcv::::res://assets/models/KayKit_City_Builder_Bits_1.0_FREE/Assets/obj/road_straight_crossing.obj
 road_tsplit.tscn::PackedScene::4797250838854567077::1765179264::0::1::::<><><>0<>0<><>::uid://dftxs0nv73s7l::::res://scenes/Tiles/base.tscn<>uid://b31p10j8jhch8::::res://assets/models/KayKit_City_Builder_Bits_1.0_FREE/Assets/obj/road_tsplit.obj
-::res://scripts/::1768809230
-player.gd::GDScript::5520274529696929009::1768809230::0::1::::<>CharacterBody3D<><>0<>0<><>::
+::res://scripts/::1770626580
+player.gd::GDScript::5520274529696929009::1770626580::0::1::::<>CharacterBody3D<><>0<>0<><>::
