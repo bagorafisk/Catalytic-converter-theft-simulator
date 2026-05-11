@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://ecfc2snxkphw" path="res://scenes/player.tscn" id="2_e2o6t"]
 [ext_resource type="PackedScene" uid="uid://jgis82infr3q" path="res://caar_wagon.tscn" id="3_feb5d"]
 [ext_resource type="PackedScene" uid="uid://36dgyd7rkif4" path="res://hud.tscn" id="5_7jktm"]
+[ext_resource type="PackedScene" uid="uid://lafplj5e672q" path="res://inventory.tscn" id="5_ryrav"]
 
 [node name="game" type="Node3D" unique_id=1951582516]
 script = ExtResource("1_fc0e3")
@@ -25,6 +26,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="inventory" parent="CanvasLayer" unique_id=1386296548 instance=ExtResource("5_ryrav")]
+visible = false
+layout_mode = 1
 
 [node name="HUD" parent="CanvasLayer" unique_id=460138118 instance=ExtResource("5_7jktm")]
 layout_mode = 1
