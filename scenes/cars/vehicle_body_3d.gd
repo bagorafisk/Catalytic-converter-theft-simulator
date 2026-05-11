@@ -5,7 +5,7 @@ signal exit_car
 signal on_car
 signal off_car
 
-@export var engine_force_amount: float = 600.0
+@export var engine_force_amount: float = 200.0
 @export var brake_force_amount: float = 50.0
 @export var steering_angle: float = 0.4
 
@@ -14,7 +14,6 @@ signal off_car
 var in_car: bool = false
 
 func _physics_process(delta: float) -> void:
-	print(in_car)
 	var throttle := 0.0
 	var steer := 0.0
 	if camera_3d.current:

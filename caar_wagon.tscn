@@ -33,7 +33,9 @@ mesh = ExtResource("3_1gruq")
 skeleton = NodePath("../..")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1859450904]
-transform = Transform3D(-1, 0, -8.742278e-08, -1.01724025e-08, 0.9932073, 0.11635872, 8.682894e-08, 0.11635872, -0.9932073, 0, 0.45628196, -0.98145187)
+transform = Transform3D(-0.9998483, 0, 0.017417416, 0.004760551, 0.9619228, 0.27327985, -0.01675421, 0.2733213, -0.9617769, 0.025386155, 0.51969016, -0.63987267)
+fov = 90.0
+4e-08, 0.11635872, -0.9932073, 0, 0.45628196, -0.98145187)
 fov = 93.85714
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=757558352]
