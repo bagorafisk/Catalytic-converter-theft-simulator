@@ -36,6 +36,7 @@ config/icon="res://icon.svg"
 
 car=""
 player=""
+cat=""
 
 [input]
 

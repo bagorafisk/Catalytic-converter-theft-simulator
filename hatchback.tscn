@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://dpkqbwi0j6xxy"]
+[gd_scene format=3 uid="uid://dpkqbwi0j6xxy"]
 
 [ext_resource type="ArrayMesh" uid="uid://gnjso4io4wck" path="res://assets/models/KayKit_City_Builder_Bits_1.0_FREE/Assets/obj/car_hatchback.obj" id="1_gjayb"]
 [ext_resource type="ArrayMesh" uid="uid://c76mccyd8uccy" path="res://assets/models/KayKit_City_Builder_Bits_1.0_FREE/Assets/obj/car_hatchback_wheel_rear_right.obj" id="2_1fx45"]
@@ -6,26 +6,26 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_ulk00"]
 size = Vector3(0.40014648, 0.34814453, 0.80218506)
 
-[node name="hatchback" type="MeshInstance3D"]
+[node name="hatchback" type="MeshInstance3D" unique_id=677098721]
 mesh = ExtResource("1_gjayb")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=611052926]
 mesh = ExtResource("2_1fx45")
 
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=1257985619]
 transform = Transform3D(-0.99999994, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -0.99999994, 0.001609385, 0, -0.0076014996)
 mesh = ExtResource("2_1fx45")
 
-[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=1447976824]
 transform = Transform3D(-0.99999994, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -0.99999994, 0.001609385, 0, -0.5119445)
 mesh = ExtResource("2_1fx45")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1685569330]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.501482)
 mesh = ExtResource("2_1fx45")
 
-[node name="RigidBody3D" type="RigidBody3D" parent="."]
+[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=1219313929 groups=["cat"]]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=250429349]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.005493164, 0.14282227, 0.0065612793)
 shape = SubResource("BoxShape3D_ulk00")

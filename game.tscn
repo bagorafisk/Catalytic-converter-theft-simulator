@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://jgis82infr3q" path="res://caar_wagon.tscn" id="3_feb5d"]
 [ext_resource type="PackedScene" uid="uid://36dgyd7rkif4" path="res://hud.tscn" id="5_7jktm"]
 [ext_resource type="PackedScene" uid="uid://lafplj5e672q" path="res://inventory.tscn" id="5_ryrav"]
+[ext_resource type="PackedScene" uid="uid://dpkqbwi0j6xxy" path="res://hatchback.tscn" id="7_eow3j"]
 
 [node name="game" type="Node3D" unique_id=1951582516]
 script = ExtResource("1_fc0e3")
@@ -36,7 +37,12 @@ layout_mode = 1
 size_flags_horizontal = 6
 size_flags_vertical = 6
 
+[node name="hatchback" parent="." unique_id=514455294 instance=ExtResource("7_eow3j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3230238, 0.079884715, -6.390736)
+
 [connection signal="enter_car" from="Player" to="caar_wagon" method="_on_player_enter_car"]
+[connection signal="off_cat" from="Player" to="CanvasLayer/HUD" method="_on_player_off_cat"]
+[connection signal="on_cat" from="Player" to="CanvasLayer/HUD" method="_on_player_on_cat"]
 [connection signal="exit_car" from="caar_wagon" to="." method="_on_caar_wagon_exit_car"]
 [connection signal="off_car" from="caar_wagon" to="CanvasLayer/HUD" method="_on_caar_wagon_off_car"]
 [connection signal="on_car" from="caar_wagon" to="CanvasLayer/HUD" method="_on_caar_wagon_on_car"]

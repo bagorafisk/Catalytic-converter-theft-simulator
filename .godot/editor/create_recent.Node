@@ -1,5 +1,5 @@
-TextureRect
 Label
+TextureRect
 TextureButton
 Control
 CenterContainer
@@ -12,4 +12,3 @@ CanvasLayer
 Container
 TextEdit
 CollisionShape3D
-RigidBody3D

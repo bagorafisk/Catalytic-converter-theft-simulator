@@ -1,6 +1,10 @@
 extends CharacterBody3D
 
 signal enter_car
+signal on_cat
+signal off_cat
+
+var can_steal_cat = false
 
 @export var speed: float = 1.5
 @export var sprint_speed: float = 3.0
@@ -145,8 +149,13 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body.is_in_group("car"):
 		can_enter_car = true
 		print("BODY ENTERED:", body.name)
-
+	if body.is_in_group("cat"):
+		can_steal_cat = true
+		on_cat.emit()
 
 func _on_area_3d_body_exited(body: Node3D) -> void:
 	if body.is_in_group("car"):
 		can_enter_car = false
+	if body.is_in_group("cat"):
+		can_steal_cat = false
+		off_cat.emit()

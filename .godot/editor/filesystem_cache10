@@ -1,8 +1,9 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1778481789
+::res://::1779086456
 caar_wagon.tscn::PackedScene::644605514860416836::1774858106::0::1::::<><><>0<>0<><>::uid://p6eo74cre8q4::::res://scenes/cars/vehicle_body_3d.gd<>uid://conglqexfdiev::::res://assets/models/KayKit_City_Builder_Bits_1.0_FREE/Assets/obj/car_stationwagon_wheel_front_right.obj<>uid://gnjso4io4wck::::res://assets/models/KayKit_City_Builder_Bits_1.0_FREE/Assets/obj/car_hatchback.obj
 game.gd::GDScript::1583150961547813548::1774858144::0::1::::<>Node3D<><>0<>0<><>::
 game.tscn::PackedScene::5913637375169889888::1774854478::0::1::::<><><>0<>0<><>::uid://cvg8a8lnuein::::res://scenes/map.tscn<>uid://ws5jam7nxu7u::::res://game.gd<>uid://ecfc2snxkphw::::res://scenes/player.tscn<>uid://jgis82infr3q::::res://caar_wagon.tscn<>uid://36dgyd7rkif4::::res://hud.tscn<>uid://lafplj5e672q::::res://inventory.tscn
+hatchback.gd::GDScript::1502968518305778621::1778485168::0::1::::<>MeshInstance3D<><>0<>0<><>::
 hatchback.tscn::PackedScene::8233712909889851946::1770025116::0::1::::<><><>0<>0<><>::uid://gnjso4io4wck::::res://assets/models/KayKit_City_Builder_Bits_1.0_FREE/Assets/obj/car_hatchback.obj<>uid://c76mccyd8uccy::::res://assets/models/KayKit_City_Builder_Bits_1.0_FREE/Assets/obj/car_hatchback_wheel_rear_right.obj
 hud.gd::GDScript::8895936159065854105::1771229793::0::1::::<>Control<><>0<>0<><>::
 hud.tscn::PackedScene::2029477464654359047::1777271175::0::1::::<><><>0<>0<><>::uid://dy0i1e08ti5y8::::res://hud.gd<>uid://dqltosbe13nl1::::res://assets/o411456v54_GWS_12-125_with_standard_side_handle_dyn.webp

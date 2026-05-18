@@ -1,5 +1,7 @@
 extends Control
 
+@export var label_2: Label
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -17,3 +19,11 @@ func _on_caar_wagon_off_car() -> void:
 
 func _on_caar_wagon_on_car() -> void:
 	$Label.show()
+
+
+func _on_player_on_cat() -> void:
+	label_2.show()
+
+
+func _on_player_off_cat() -> void:
+	label_2.hide()
