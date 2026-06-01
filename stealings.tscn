@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://7xe5r8lfg2td"]
+
+[ext_resource type="Texture2D" uid="uid://c8j8o05byoo3f" path="res://assets/Untitled-1.svg" id="1_1qgk8"]
+[ext_resource type="Script" uid="uid://kj57qj5hgm4" path="res://progress_bar.gd" id="1_h22ig"]
+[ext_resource type="Script" uid="uid://dqw824w25ikn2" path="res://stealings.gd" id="1_lm55i"]
+[ext_resource type="Texture2D" uid="uid://bs5fa5kpt3j8c" path="res://assets/exhaustsvg.svg" id="2_3g083"]
+[ext_resource type="Texture2D" uid="uid://bw6md3kljpevc" path="res://assets/cat.svg" id="3_h22ig"]
+[ext_resource type="Texture2D" uid="uid://bssxcqmay5f3d" path="res://assets/angle1.png" id="5_4jqc8"]
+[ext_resource type="Script" uid="uid://4aei3pvf4t3r" path="res://sprite_2d_2.gd" id="6_4jqc8"]
+[ext_resource type="Texture2D" uid="uid://cjxu670w47vxu" path="res://assets/sparks.png" id="7_lm55i"]
+
+[sub_resource type="Theme" id="Theme_4jqc8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lm55i"]
+radius = 24.566658
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lm55i"]
+size = Vector2(11, 52)
+
+[node name="stealings" type="Node2D" unique_id=1375742234]
+script = ExtResource("1_lm55i")
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=271425124]
+offset_left = 204.0
+offset_top = -122.0
+offset_right = 956.0
+offset_bottom = -79.0
+theme = SubResource("Theme_4jqc8")
+show_percentage = false
+script = ExtResource("1_h22ig")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=826064317]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_1qgk8")
+centered = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D" unique_id=1435129557]
+position = Vector2(960, 533.3333)
+texture = ExtResource("2_3g083")
+
+[node name="Cat" type="Sprite2D" parent="Sprite2D" unique_id=235135077]
+position = Vector2(1606.6665, 533.3333)
+texture = ExtResource("3_h22ig")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=161579773]
+position = Vector2(1350.0001, 695)
+rotation = 1.5707964
+scale = Vector2(0.2075575, 0.20755748)
+texture = ExtResource("5_4jqc8")
+offset = Vector2(300, -250)
+script = ExtResource("6_4jqc8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D2" unique_id=161163010]
+position = Vector2(0.000289917, 0)
+texture = ExtResource("7_lm55i")
+offset = Vector2(-100, 130)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D2" unique_id=959732514]
+position = Vector2(-96.35853, 125.2665)
+shape = SubResource("CircleShape2D_lm55i")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=646377731]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=207708431]
+position = Vector2(863, 318)
+shape = SubResource("RectangleShape2D_lm55i")
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=277966933]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=40884392]
+position = Vector2(1065, 318)
+shape = SubResource("RectangleShape2D_lm55i")
